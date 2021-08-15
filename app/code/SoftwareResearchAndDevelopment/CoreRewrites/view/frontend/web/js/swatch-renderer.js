@@ -501,9 +501,12 @@ define([
 
             if(swatchLength == 3){
                 if($('.swatch-attribute').hasClass("color")){
-                    color = color.toLowerCase().replace(/\b[a-z]/g, function(letter) {
-                        return letter.toUpperCase();
-                    });
+                    if (color) {
+                        color = color.toLowerCase().replace(/\b[a-z]/g, function(letter) {
+                            return letter.toUpperCase();
+                        });
+                    }
+
                     var elemId = 'div.swatch-option.color[data-option-label="'+color+'"]';
                     $(elemId).trigger('click');
                 }

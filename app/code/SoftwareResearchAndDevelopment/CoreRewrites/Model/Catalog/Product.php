@@ -28,17 +28,17 @@ class Product extends \Magento\Catalog\Model\Product
     /**
      * @var \Magento\Catalog\Model\ResourceModel\Product $productResourceModel
      */
-    protected \Magento\Catalog\Model\ResourceModel\Product $productResourceModel;
+    protected $productResourceModel;
 
     /**
      * @var \Magento\Catalog\Model\ProductFactory $productFactory
      */
-    protected \Magento\Catalog\Model\ProductFactory $productFactory;
+    protected $productFactory;
 
     /**
      * @var \Magento\Catalog\Model\ResourceModel\Product\CollectionFactory $productCollectionFactory
      */
-    protected \Magento\Catalog\Model\ResourceModel\Product\CollectionFactory $productCollectionFactory;
+    protected $productCollectionFactory;
 
     public function __construct(\Magento\Framework\Model\Context $context,
                                 \Magento\Framework\Registry $registry,

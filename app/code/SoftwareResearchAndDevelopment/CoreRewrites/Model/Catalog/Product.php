@@ -159,7 +159,6 @@ class Product extends \Magento\Catalog\Model\Product
     public function getName(): string
     {
         if ($this->getIsSwatchColor()) {
-//            $name = self::SWAP_NAME;
             $name = $this->getSwatchColorPieceProductName();
 
             if ($name == '') {
@@ -205,7 +204,7 @@ class Product extends \Magento\Catalog\Model\Product
     private function getMergedSwatchesProductId(): int
     {
         $value = $this->_resource->getAttributeRawValue($this->getId(), self::MERGED_SWATCHES_PRODUCT_ID_ATTRIBUTE, $this->getStore()->getId());
-        if (is_null($value)) {
+        if (is_null($value) || (is_array($value) && empty($value))) {
             $value = 0;
         }
         return $value;

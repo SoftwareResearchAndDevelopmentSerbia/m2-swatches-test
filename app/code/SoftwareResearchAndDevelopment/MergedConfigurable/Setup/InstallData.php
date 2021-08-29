@@ -1,6 +1,6 @@
 <?php
 
-namespace SoftwareResearchAndDevelopment\Attribute\Setup;
+namespace SoftwareResearchAndDevelopment\MergedConfigurable\Setup;
 
 use Magento\Eav\Setup\EavSetupFactory;
 use Magento\Framework\Setup\InstallDataInterface;
@@ -20,7 +20,7 @@ class InstallData implements InstallDataInterface
     {
         $setup->startSetup();
 
-        $eavSetup = $this->eavSetupFactory->create(['setup'=>$setup]);
+        $eavSetup = $this->eavSetupFactory->create(['setup' => $setup]);
 
         /**
          * Boolean Attribute
@@ -80,7 +80,6 @@ class InstallData implements InstallDataInterface
                 'apply_to' => 'configurable'
             ]
         );
-
 
         $setup->endSetup();
     }

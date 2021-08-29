@@ -1,6 +1,6 @@
 <?php
 
-namespace SoftwareResearchAndDevelopment\CoreRewrites\Plugin;
+namespace SoftwareResearchAndDevelopment\MergedConfigurable\Plugin;
 
 use Magento\Catalog\Api\CategoryRepositoryInterface;
 use Magento\Catalog\Model\FilterProductCustomAttribute;
